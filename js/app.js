@@ -2,7 +2,7 @@
 (function() {
 
   $(function() {
-    var activePic, changePicture, circleCount, j, pic_width, pics_count, prepareBG, randomPic, slider, sliderInner, _i;
+    var activePic, changePicture, circleCount, j, pic_width, pics_count, prepareBackground, randomPic, slider, sliderInner, _i;
     $('ul.items li').each(function(index) {
       return $(this).addClass("" + index);
     });
@@ -12,7 +12,6 @@
     pics_count = parseInt(($(window).width() / 44).toFixed());
     circleCount = parseInt((pics_count / $('ul.items li').length).toFixed());
     activePic = ((pics_count / 2).toFixed()) - 1;
-    console.log(pics_count, circleCount);
     for (j = _i = 0; 0 <= circleCount ? _i < circleCount : _i > circleCount; j = 0 <= circleCount ? ++_i : --_i) {
       slider.append(sliderInner);
     }
@@ -24,7 +23,7 @@
       }
       return $('#photo-bg li').removeClass('active').eq(window.showIndex).addClass('active');
     };
-    prepareBG = function() {
+    prepareBackground = function() {
       $('#photo-bg').find('li').eq(0).addClass('active');
       window.showIndex = 0;
       return setInterval(changePicture, 10000);
@@ -33,17 +32,16 @@
       var count, curr, random;
       count = $('ul.items li').length;
       random = Math.floor(Math.random() * (count - 0 + 1));
-      console.log(random);
       curr = $('ul.items li').eq(random);
-      curr.clone().insertAfter($('ul.items li').eq(activePic));
-      return curr.remove();
+      curr.insertAfter($('ul.items li').eq(activePic - 1));
+      return this;
     };
-    prepareBG();
+    prepareBackground();
     randomPic();
     $('ul.items li').removeClass('active').eq(activePic).addClass('active');
-    $("html").keypress(function(event) {
+    $(document).on('keyup', function(event) {
       var p;
-      if (event.which === 1102 || event.which === 46) {
+      if (event.keyCode === 190 || event.keyCode === 39) {
         return $(".items li").eq(0).animate({
           "margin-left": -pic_width
         }, 300, function() {
@@ -55,7 +53,7 @@
           p.remove();
           return $('ul.items li').removeClass('active').eq(activePic).addClass('active');
         });
-      } else if (event.which === 1073 || event.which === 44) {
+      } else if (event.which === 188 || event.which === 37) {
         p = $(".items li").eq(-1);
         p.clone().css({
           "margin-left": -pic_width
