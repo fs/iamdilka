@@ -60,21 +60,21 @@ abbr, acronym {
   font-variant: normal;
 }
 
-/* line 8, ../sass/style.scss */
+/* line 6, ../sass/style.scss */
 body, html {
   width: 100%;
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 #wrapper {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 .footer {
   display: block;
   position: fixed;
@@ -85,14 +85,14 @@ body, html {
   background-image: url("../images/footer.png");
 }
 
-/* line 30, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 .photo {
   display: block;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 36, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 .photo li {
   position: absolute;
   left: 0;
@@ -107,26 +107,27 @@ body, html {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 47, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .photo li.img-1 {
   background-image: url("../images/1.jpg");
 }
-/* line 51, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 .photo li.img-2 {
   background-image: url("../images/2.jpg");
 }
-/* line 51, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .photo li.img-3 {
   background-image: url("../images/3.jpg");
 }
+/* line 57, ../sass/style.scss */
 .photo li.img-4 {
   background-image: url("../images/4.jpg");
 }
+/* line 61, ../sass/style.scss */
 .photo li.img-5 {
   background-image: url("../images/5.jpg");
 }
-
-/* line 55, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .photo li.active {
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -135,9 +136,9 @@ body, html {
   opacity: 1;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 .items {
-  width: 200%;
+  width: 10000px;
   height: 52px;
   background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
@@ -150,7 +151,7 @@ body, html {
   padding: 0 4px;
   margin-left: -15px;
 }
-/* line 74, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .items li {
   margin: 0 auto;
   float: left;
@@ -162,7 +163,7 @@ body, html {
   padding: 4px 2px;
   position: relative;
 }
-/* line 83, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 .items li .photo {
   opacity: 0.4;
   width: 40px;
@@ -170,7 +171,7 @@ body, html {
   overflow: hidden;
   background-color: #cfcfcf;
 }
-/* line 91, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 .items li .text {
   display: none;
   width: 340px;
@@ -186,7 +187,7 @@ body, html {
   bottom: 65px;
   padding: 20px;
 }
-/* line 104, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .items li .text:after {
   content: '';
   position: absolute;
@@ -197,9 +198,9 @@ body, html {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 7px solid #fff;
+  border-top: 7px solid white;
 }
-/* line 117, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 .items li .text .msg {
   height: 370px;
   overflow-y: auto;
@@ -208,11 +209,11 @@ body, html {
   font-style: italic;
   color: #3d3131;
 }
-/* line 127, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .items li span {
   display: block;
 }
-/* line 131, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .items li .s-1 {
   color: #d1ae5f;
   font-family: 'Open Sans';
@@ -220,7 +221,7 @@ body, html {
   text-align: center;
   font-style: italic;
 }
-/* line 139, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .items li .s-2 {
   font-size: 24px;
   font-style: italic;
@@ -228,7 +229,7 @@ body, html {
   position: relative;
   color: #413f43;
 }
-/* line 146, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 .items li .s-2:after {
   content: '';
   background-image: url("../images/figure.png");
@@ -238,11 +239,11 @@ body, html {
   bottom: -15px;
   left: 0px;
 }
-/* line 158, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .items li.active .text {
   display: block;
 }
-/* line 162, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 .items li.active .photo {
   opacity: 1;
 }
